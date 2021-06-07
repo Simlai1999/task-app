@@ -1,0 +1,49 @@
+.form-container {
+    max-width: 500px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.float-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 1rem;
+}
+
+.button {
+    margin-left: 5px;
+    background: #0084ff;
+    border: none;
+}
+
+.button:hover {
+    background-color: #606c76;
+    color: #fff;
+}
+
+.button.button-outline {
+    background: transparent;
+    border: 0.1rem solid #0084ff;
+    color: #0084ff;
+}
+
+.button.button-outline:hover {
+    background-color: #606c76;
+    color: #fff;
+    border: none;
+}
+
+.input {
+    border: 0.1rem solid #0084ff91;
+}
+
+textarea {
+    border: 0.1rem solid #0084ff91;
+}

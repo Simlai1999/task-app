@@ -1,0 +1,12 @@
+<div class="main-container">
+    <div class="search-bar-container">
+        <div class="container">
+            <input type="text" placeholder="Find.." class="filter">
+            <button class="button">Filter</button>
+        </div>
+    </div>
+    <div class="notes-list">
+        <app-note-card *ngFor="let note of createNoteService.notes" [title]="note.title" [body]="note.body"></app-note-card>
+    </div>
+    <button class="button add-button" routerLink="/create-note">+ Add</button>
+</div>

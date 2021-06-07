@@ -1,0 +1,28 @@
+<div class="form-container">
+    <form #noteForm="ngForm">
+        <div class="field">
+            <label class="label">Title</label>
+            <div class="control">
+                <input type="text" required class="input" placeholder="Title.." name="title" [(ngModel)]="title">
+            </div>
+        </div>
+
+        <br>
+
+        <div class="field">
+            <label class="label">Body</label>
+            <div class="control">
+                <textarea required class="textarea" placeholder="Body.." name="body" [(ngModel)]="body"></textarea>
+            </div>
+        </div>
+
+        <div class="float-right">
+            <div class="control">
+                <button class="button button-outline" type="button" routerLink="/note-list">Cancel</button>
+            </div>
+            <div class="float-right">
+                <button class="button" type="submit" [disabled]="!noteForm.valid" (click)="submitForm()">Save</button>
+            </div>
+        </div>
+    </form>
+</div>
