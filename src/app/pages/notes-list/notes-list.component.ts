@@ -10,5 +10,4 @@ export class NotesListComponent implements OnInit {
   constructor(public createNoteService: CreateNoteService) { }
 
   ngOnInit(): void { }
-
 }

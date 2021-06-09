@@ -1,4 +1,6 @@
-import { Component, Input, OnInit} from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import Note from '../models/note.model';
+import { CreateNoteService } from '../services/create-note.service';
 
 @Component({
   selector: 'app-note-card',
@@ -7,11 +9,12 @@ import { Component, Input, OnInit} from '@angular/core';
 })
 export class NoteCardComponent implements OnInit {
   
-  @Input() title: string = '';
-  @Input() body: string = '';
+  @Input() note: Note;
+  @Output() requestDelete = new EventEmitter<Note>();
   
-  constructor() { }
+  constructor(public createNoteService: CreateNoteService) { 
+    this.note = new Note('', '');
+  }
 
   ngOnInit(): void { }
-
 }

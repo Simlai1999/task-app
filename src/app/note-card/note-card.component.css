@@ -55,7 +55,7 @@
     opacity: 0.5;
     transition: opacity 0.2s ease-out;
     transform: scale(0.5);
-
+    border: none;
 }
 
 .x-button:hover {
@@ -83,7 +83,7 @@
     opacity: 0.5;
     transition: opacity 0.2s ease-out;
     transform: scale(0.5);
-
+    border: none;
 }
 
 .edit-button:hover {

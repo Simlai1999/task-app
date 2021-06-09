@@ -1,11 +1,11 @@
 <div #container class="note-card-container">
     <div class="note-card-content">
-        <h1 class="note-card-title">{{ title }}</h1>
+        <h1 class="note-card-title">{{ note.title }}</h1>
         <div class="note-card-body">
-            <p>{{ body }}</p>
+            <p>{{ note.body }}</p>
             <div class="fade-out-text"></div>
         </div>
     </div>
-    <div class="x-button"></div>
-    <div class="edit-button"></div>
+    <button class="x-button" type="button" (click)="requestDelete.emit(note)"></button>
+    <button class="edit-button"></button>
 </div>
