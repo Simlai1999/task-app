@@ -42,8 +42,14 @@
 
 .input {
     border: 0.1rem solid #0084ff91;
+    color: #E5E5E5;
 }
 
 textarea {
     border: 0.1rem solid #0084ff91;
+    color: #E5E5E5;
+}
+
+.label {
+    color: #E5E5E5;
 }

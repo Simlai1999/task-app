@@ -1,2 +1,5 @@
 /* @import './src/main-styles.css'; */
 @import '../../../Documents/milligram-1.4.1/dist/milligram.css';
+body{
+    background: #1F1F1F;
+}

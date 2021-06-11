@@ -4,7 +4,7 @@ import Note from '../models/note.model';
 @Injectable({
   providedIn: 'root'
 })
-export class CreateNoteService {
+export class NoteService {
   
   public notes: Note[] = [];
 
@@ -20,6 +20,12 @@ export class CreateNoteService {
     const newItemCount: number = this.notes.length;
 
     return originalItemCount !== newItemCount;
+  }
+
+  public update(index: number, title: string, body: string) {
+    let note = this.notes[index];
+    note.title = title;
+    note.body = body;
   }
 }
 

@@ -1,6 +1,6 @@
-
 .layout-box {
     display: flex;
+    position: relative;
     flex-direction: column;
     height: 100%;
     overflow: hidden;
@@ -10,19 +10,43 @@
     flex-grow: 1;
 }
 
-.top-bar {
-    width: 100%;
-    height: 60px;
-    background: #0084ff;
-    box-shadow: 0px 0px 10px 0px;
+.sidebar {
+    width: 200px;
+    height: 100%;
+    padding: 30px 0;
+    background: #141414;
     display: flex;
     flex-shrink: 0;
     justify-content: center;
     align-items: center;
 }
 
-.top-bar h1 {
+.sidebar ul li {
+    color: #E5E5E5;
+    padding: 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(225,225,225,0.05);
+    list-style-type: none;
+}
+
+.sidebar ul li a {
+    color: #bdb8d7;
+    display: block;
+}
+
+.sidebar ul li a .fas{
+    width: 25px;
+}
+
+.sidebar ul li:hover {
+    background: #494850;
+}
+
+.sidebar ul li:hover a {
     color: #fff;
-    font-size: 30px;
-    margin-top: 20px;
+}
+
+.task_icon {
+    background-image: url('../../../assets/noun_task_2550126.svg');
+    color: #fff;
 }

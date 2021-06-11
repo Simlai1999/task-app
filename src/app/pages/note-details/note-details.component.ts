@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { CreateNoteService } from 'src/app/services/create-note.service';
+import { NoteService } from 'src/app/services/note.service';
 
 
 
@@ -15,14 +15,14 @@ export class NoteDetailsComponent implements OnInit {
   public body: string = '';
 
   constructor(
-    private createNoteService: CreateNoteService,
+    private NoteService: NoteService,
     private router: Router
     ) { }
 
   ngOnInit(): void { }
 
   submitForm(): void {
-    this.createNoteService.saveNote(this.title, this.body);
+    this.NoteService.saveNote(this.title, this.body);
     this.router.navigate(["/note-list"]);
     
   }
