@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-// import { faCloudMoon } from '@fortawesome/free-solid-svg-icons';
 import { NoteService } from 'src/app/services/note.service';
 @Component({
   selector: 'app-notes-list',
@@ -7,8 +6,6 @@ import { NoteService } from 'src/app/services/note.service';
   styleUrls: ['./notes-list.component.css']
 })
 export class NotesListComponent implements OnInit {
-
-  // faCloudMoon = faCloudMoon;
 
   constructor(public NoteService: NoteService) { }
 

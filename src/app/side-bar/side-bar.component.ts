@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faChevronLeft, faList } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faTasks } from '@fortawesome/free-solid-svg-icons';
 import { faCalendarAlt, faCheckCircle } from '@fortawesome/free-regular-svg-icons';
 
 @Component({
@@ -9,10 +9,10 @@ import { faCalendarAlt, faCheckCircle } from '@fortawesome/free-regular-svg-icon
 })
 export class SideBarComponent implements OnInit {
 
-  faList = faList;
+  faTasks = faTasks;
   faCheckCircle = faCheckCircle;
   faCalendarAlt = faCalendarAlt;
-  faChevronLeft = faChevronLeft;
+  faBars = faBars;
 
   constructor() { }
 
