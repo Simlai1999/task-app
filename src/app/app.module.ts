@@ -9,7 +9,10 @@ import { NotesListComponent } from './pages/notes-list/notes-list.component';
 import { MainLayoutComponent } from './pages/main-layout/main-layout.component';
 import { NoteCardComponent } from './note-card/note-card.component';
 import { NoteDetailsComponent } from './pages/note-details/note-details.component';
-import { SidebarModule } from "ng-sidebar";
+import { SideBarComponent } from './side-bar/side-bar.component';
+import { CompletedComponent } from './pages/completed/completed.component';
+import { UpcomingComponent } from './pages/upcoming/upcoming.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -17,13 +20,16 @@ import { SidebarModule } from "ng-sidebar";
     NotesListComponent,
     MainLayoutComponent,
     NoteCardComponent,
-    NoteDetailsComponent
+    NoteDetailsComponent,
+    SideBarComponent,
+    CompletedComponent,
+    UpcomingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    SidebarModule.forRoot()
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

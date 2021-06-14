@@ -1,6 +1,6 @@
 .main-container {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-row: auto;
     max-width: 500px;
     margin: auto;
     padding-top: 50px;
@@ -8,9 +8,9 @@
 
 .button {
     padding-top: 1px;
-    background: #0084ff;
+    background: #3191df;
     border: none;
-    color: #1F1F1F;
+    color: #FAFAFA;
 }
 
 .button:hover {
@@ -30,15 +30,46 @@ app-note-card {
 
 .add-button{
     position: fixed;
-    bottom: 0;
-    right: 20px;
+    bottom: 20px;
+    right: 30px;
     width: 1px;
-    border-radius: 50px;
-    height: 50px;
-    font-size: 10px;
-    padding-left: 18px;
-    padding-right: 35px;
+    border-radius: 15px;
+    height: 40px;
+    padding-left: 11px;
+    padding-right: 65px;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
+    font-size: 15px;
 }
+
+.greet {
+    color: #fff;
+    position: absolute;
+    width: 190px;
+    height: 44px;
+    left: 369px;
+    top: 35px;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 44px;
+}
+
+.header-name {
+    color: #33FF9D;
+    position: absolute;
+    width: 190px;
+    height: 44px;
+    left: 400px;
+    top: 35px;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 44px;
+}
+
+/* .empty-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    top: 10rem;
+} */

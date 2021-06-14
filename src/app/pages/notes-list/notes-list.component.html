@@ -1,4 +1,5 @@
 <div class="main-container">
+    <h1 class="greet">Hi</h1><h2 class="header-name">Sounak</h2>
     <div class="notes-list">
         <app-note-card 
         *ngFor="let note of NoteService.notes; index as i"
@@ -6,5 +7,6 @@
         (requestDelete)="NoteService.deleteTask(i)">
     </app-note-card>
     </div>
-    <button class="button add-button" routerLink="/create-note">+</button>
+    <!-- <fa-icon class="empty-image" [icon]="faCloudMoon"></fa-icon> -->
+    <button class="button add-button" routerLink="/create-note">+ Add</button>
 </div>

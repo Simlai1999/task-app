@@ -1,6 +1,9 @@
 export default class Note {
     private _title: string;
     private _body: string;
+    private _createdAt: Date | null;
+    private _completedAt: Date | null;
+    private _deletedAt: Date | null;
 
     constructor(
         title: string,
@@ -8,6 +11,9 @@ export default class Note {
     ) {
         this._title = title;
         this._body = body;
+        this._createdAt = new Date();
+        this._completedAt = null;
+        this._deletedAt = null;
     }
 
     public get title() {
@@ -24,5 +30,29 @@ export default class Note {
 
     public set body(body: string) {
         this._body = body;
+    }
+
+    public get createdAt(): Date | null {
+        return this._createdAt;
+    }
+
+    public set createdAt(createdAt: Date | null) {
+        this._createdAt = createdAt;
+    }
+
+    public get deletedAt(): Date | null {
+        return this._deletedAt;
+    }
+
+    public set deletedAt(deletedAt: Date | null) {
+        this._deletedAt = deletedAt;
+    }
+
+    public get completedAt(): Date | null {
+        return this._completedAt;
+    }
+
+    public set completedAt(completedAt: Date | null) {
+        this._completedAt = completedAt;
     }
 }

@@ -1,4 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import { faEdit } from '@fortawesome/free-regular-svg-icons';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import Note from '../models/note.model';
 import { NoteService } from '../services/note.service';
 
@@ -11,6 +13,8 @@ export class NoteCardComponent implements OnInit {
   
   @Input() note: Note;
   @Output() requestDelete = new EventEmitter<Note>();
+  faTrash = faTrash;
+  faEdit = faEdit;
   
   constructor(public NoteService: NoteService) { 
     this.note = new Note('', '');

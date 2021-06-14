@@ -1,7 +1,7 @@
 .form-container {
     max-width: 500px;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 30rem;
 }
 
 .control {
@@ -19,19 +19,23 @@
 
 .button {
     margin-left: 5px;
-    background: #0084ff;
+    background: #49A8F7;
+    border-radius: 15px;
+    color: #2E2E2E;
     border: none;
+    font-weight: bold;
 }
 
 .button:hover {
     background-color: #606c76;
     color: #fff;
+    font-weight: bold;
 }
 
 .button.button-outline {
     background: transparent;
-    border: 0.1rem solid #0084ff;
-    color: #0084ff;
+    border: 0.1rem solid #49A8F7;
+    color: #49A8F7;
 }
 
 .button.button-outline:hover {
@@ -41,15 +45,43 @@
 }
 
 .input {
-    border: 0.1rem solid #0084ff91;
+    background: none;
+    border: none;
     color: #E5E5E5;
+    border: 3px solid #33FF9D;
+    border-radius: 15px;
+    height: 5rem;
 }
 
 textarea {
-    border: 0.1rem solid #0084ff91;
+    background: none;
+    border: none;
     color: #E5E5E5;
+    border: 3px solid #33FF9D;
+    border-radius: 15px;
+    height: 5rem;
 }
 
-.label {
-    color: #E5E5E5;
+.greet {
+    color: #fff;
+    position: absolute;
+    width: 190px;
+    height: 44px;
+    left: 369px;
+    top: 35px;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 44px;
+}
+
+.header-name {
+    color: #33FF9D;
+    position: absolute;
+    width: 190px;
+    height: 44px;
+    left: 477px;
+    top: 35px;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 44px;
 }

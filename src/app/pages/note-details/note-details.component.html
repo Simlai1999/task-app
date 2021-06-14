@@ -1,18 +1,17 @@
 <div class="form-container">
+    <h1 class="greet">Add Your</h1><h2 class="header-name">Task</h2>
     <form #noteForm="ngForm">
         <div class="field">
-            <label class="label">Title</label>
             <div class="control">
-                <input type="text" required class="input" placeholder="Title.." name="title" [(ngModel)]="title">
+                <input type="text" placeholder="Title" required class="input" name="title" [(ngModel)]="title">
             </div>
         </div>
 
         <br>
 
         <div class="field">
-            <label class="label">Body</label>
             <div class="control">
-                <textarea required class="textarea" placeholder="Body.." name="body" [(ngModel)]="body"></textarea>
+                <textarea required placeholder="Body" class="textarea" name="body" [(ngModel)]="body"></textarea>
             </div>
         </div>
 
