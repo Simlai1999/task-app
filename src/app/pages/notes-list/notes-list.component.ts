@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Note } from 'src/app/noteServices/services';
 import { NoteService } from 'src/app/services/note.service';
 @Component({
   selector: 'app-notes-list',
@@ -7,7 +8,20 @@ import { NoteService } from 'src/app/services/note.service';
 })
 export class NotesListComponent implements OnInit {
 
-  constructor(public NoteService: NoteService) { }
+  public notes: Note[] = [];
 
-  ngOnInit(): void { }
+  constructor(public NoteService: NoteService, private noteService: NoteService) { }
+
+  ngOnInit(): void { 
+    this.notes = this.noteService.notes;
+  }
+
+    private applyFilter(filterName: string) {
+    this.notes = this.noteService.notes.filter(note => {
+      if (filterName === 'completed') {
+        return note.completedAt != null;  
+      }
+      return note
+    });
+  }
 }

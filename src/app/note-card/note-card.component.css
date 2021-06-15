@@ -124,3 +124,14 @@ h6 {
 .date {
     font-size: 10px;
 }
+
+.done {
+    position: absolute;
+    width: 34px;
+    font-size: 25px;
+    background: none;
+    color: #33FF9D;
+    border: none;
+    top: 15px;
+    right: 10px;
+}

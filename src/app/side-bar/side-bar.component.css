@@ -11,12 +11,19 @@
     left: 35px;
     top: 35px;
     border-radius: 15px;
+    /* transition: 0.2s ease-out; */
 }
+
+/* .sidebar:hover {
+    width: 20rem;
+    transition: 0.2s ease-out;
+} */
 
 .sidebar ul li {
     color: #E5E5E5;
     padding: 15px;
     list-style-type: none;
+    cursor: pointer;
 }
 
 .sidebar ul li a {
@@ -53,12 +60,21 @@ h1:hover {
 
 .today {
     color: #0285F3;
+    cursor: pointer;
+    /* margin: 24px; */
+    /* font-size: 30px; */
 }
 
-.tomorrow {
+.upcoming {
     color: #F7B149;
+    cursor: pointer;
+    /* margin: 24px; */
+    /* font-size: 30px; */
 }
 
 .completed {
     color: #50FF33;
+    cursor: pointer;
+    /* margin: 24px; */
+    /* font-size: 30px; */
 }

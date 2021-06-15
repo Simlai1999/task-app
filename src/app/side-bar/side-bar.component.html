@@ -1,8 +1,8 @@
 <div class="sidebar">
     <ul>
         <li><h1><fa-icon [icon]="faBars"></fa-icon>Navigation</h1></li>
-        <li><a routerLink="/note-list"><fa-icon class="today" [icon]="faTasks"></fa-icon>Today</a></li>
-        <li><a routerLink="/upcoming"><fa-icon class="tomorrow" [icon]="faCalendarAlt"></fa-icon>Upcoming</a></li>
-        <li><a routerLink="/completed"><fa-icon class="completed" [icon]="faCheckCircle"></fa-icon>Completed</a></li>
+        <li><a (click)="changeFilter('today')" class="todayText"><fa-icon class="today" [icon]="faTasks"></fa-icon>Today</a></li>
+        <li><a (click)="changeFilter('upcoming')" class="upcomingText"><fa-icon class="upcoming" [icon]="faCalendarAlt"></fa-icon>Upcoming</a></li>
+        <li><a (click)="changeFilter('completed')" class="completedText"><fa-icon class="completed" [icon]="faCheckCircle"></fa-icon>Completed</a></li>
     </ul>
 </div>

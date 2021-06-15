@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faBars, faTasks } from '@fortawesome/free-solid-svg-icons';
 import { faCalendarAlt, faCheckCircle } from '@fortawesome/free-regular-svg-icons';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-side-bar',
@@ -13,10 +14,19 @@ export class SideBarComponent implements OnInit {
   faCheckCircle = faCheckCircle;
   faCalendarAlt = faCalendarAlt;
   faBars = faBars;
+  
 
-  constructor() { }
+  constructor(private router: Router) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
+
+  public changeFilter(filterName: string) {
+    console.log(filterName);
+    const url = this.router.url.split('?')[0];
+    const params = {
+      filter: filterName
+    };
+
+    this.router.navigate([url], { queryParams: params });
   }
-
 }
