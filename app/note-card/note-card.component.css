@@ -1,0 +1,137 @@
+.note-card-container {
+    position: relative;
+    background: #2E2E2E;
+    border-radius: 0.5rem;
+}
+
+.note-card-content {
+    padding: 25px;
+}
+
+.note-card-body {
+    position: relative;
+    max-height: 80px;
+    overflow: hidden;
+    color: #E5E5E5;
+}
+
+.fade-out-text {
+    position: absolute;
+    bottom: 0;
+    height: 50%;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(46, 46, 46));
+    pointer-events: none;
+}
+
+.note-card-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #E5E5E5;
+}
+
+.notes-list {
+    margin-top: 3rem;
+}
+
+.trash {
+    position: absolute;
+    top: 104px;
+    right: 35px;
+    width: 34px;
+    font-size: 30px;
+    background:none;
+    color: #fb5a5a;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 1rem;
+    transition: opacity 0.2s ease-out;
+    transform: scale(0.5);
+    border: none;
+}
+
+.trash:hover {
+    transform: scale(1);
+    transition: transform 0.2s ease-out;
+    cursor: pointer;
+}
+
+.trash:active{
+    color: #fff;
+}
+
+.edit {
+    position: absolute;
+    top: 98px;
+    right: 0px;
+    height: 50px;
+    width: 34px;
+    font-size: 30px;
+    background:none;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 1rem;
+    transition: opacity 0.2s ease-out;
+    transform: scale(0.5);
+    border: none;
+    color: #00ff40b0;
+}
+
+.edit:hover {
+    transform: scale(1);
+    transition: transform 0.2s ease-out;
+    cursor: pointer;
+}
+
+.edit:active{
+    color: #fff;
+}
+
+.greet {
+    color: #fff;
+    position: absolute;
+    width: 190px;
+    height: 44px;
+    left: 369px;
+    top: 35px;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 44px;
+}
+
+.header-name {
+    color: #33FF9D;
+    position: absolute;
+    width: 190px;
+    height: 44px;
+    left: 400px;
+    top: 35px;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 44px;
+}
+
+h6 {
+    position: absolute;
+    width: 190px;
+    height: 44px;
+    left: 369px;
+    top: 72px;
+}
+
+.date {
+    font-size: 10px;
+}
+
+.done {
+    position: absolute;
+    width: 34px;
+    font-size: 25px;
+    background: none;
+    color: #33FF9D;
+    border: none;
+    top: 15px;
+    right: 10px;
+}

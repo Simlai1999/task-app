@@ -1,0 +1,67 @@
+.main-container {
+    display: grid;
+    grid-row: auto;
+    max-width: 500px;
+    margin: auto;
+    padding-top: 50px;
+}
+
+.button {
+    padding-top: 1px;
+    background: #3191df;
+    border: none;
+    color: #FAFAFA;
+}
+
+.button:hover {
+    background-color: #606c76;
+    color: #fff;
+}
+
+.notes-list {
+    margin-top: 3rem;
+    margin-bottom: 70px;
+}
+
+app-note-card {
+    display: block;
+    margin-top: 25px;
+}
+
+.add-button{
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    width: 1px;
+    border-radius: 15px;
+    height: 40px;
+    padding-left: 11px;
+    padding-right: 65px;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+.greet {
+    color: #fff;
+    position: absolute;
+    width: 190px;
+    height: 44px;
+    left: 369px;
+    top: 35px;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 44px;
+}
+
+.header-name {
+    color: #33FF9D;
+    position: absolute;
+    width: 190px;
+    height: 44px;
+    left: 400px;
+    top: 35px;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 44px;
+}
