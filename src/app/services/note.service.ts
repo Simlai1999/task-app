@@ -5,13 +5,17 @@ import Note from '../models/note.model';
   providedIn: 'root'
 })
 export class NoteService {
-  
+
   public notes: Note[] = [];
 
   constructor() { }
 
-  public saveNote = (title: string, body: string) => {
-    this.notes.push(new Note(title, body));
+  public saveNote(title: string, body: string): Note {
+    const note: Note = new Note(title, body);
+
+    this.notes.push(note);
+
+    return note;
   }
 
   public deleteTask(index: number): boolean {

@@ -1,11 +1,12 @@
 <div class="main-container">
-    <h1 class="greet">Hi</h1><h2 class="header-name">Sounak</h2>
-    <div class="notes-list">
-        <app-note-card 
-        *ngFor="let note of NoteService.notes; index as i"
-        [note]="note"
-        (requestDelete)="NoteService.deleteTask(i)">
+  <h1 class="greet">Hi</h1>
+  <h2 class="header-name">Sounak</h2>
+
+  <div class="notes-list">
+    <app-note-card *ngFor="let note of notes; index as i" [note]="note"
+      (requestDelete)="noteService.deleteTask(i)">
     </app-note-card>
-    </div>
-    <button class="button add-button" routerLink="/create-note">+ Add</button>
+
+  </div>
+  <button class="button add-button" routerLink="/create-note">+ Add</button>
 </div>

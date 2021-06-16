@@ -10,19 +10,17 @@ import { Router } from '@angular/router';
 })
 export class SideBarComponent implements OnInit {
 
-  faTasks = faTasks;
-  faCheckCircle = faCheckCircle;
-  faCalendarAlt = faCalendarAlt;
-  faBars = faBars;
-  
+  public faTasks = faTasks;
+  public faCheckCircle = faCheckCircle;
+  public faCalendarAlt = faCalendarAlt;
+  public faBars = faBars;
 
   constructor(private router: Router) { }
 
   ngOnInit(): void { }
 
   public changeFilter(filterName: string) {
-    console.log(filterName);
-    const url = this.router.url.split('?')[0];
+    const url: string = this.router.url.split('?')[0];
     const params = {
       filter: filterName
     };
