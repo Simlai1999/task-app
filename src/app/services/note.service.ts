@@ -22,6 +22,7 @@ export class NoteService {
     const originalItemCount: number = this.notes.length;
     this.notes.splice(index, 1);
     const newItemCount: number = this.notes.length;
+    
 
     return originalItemCount !== newItemCount;
   }

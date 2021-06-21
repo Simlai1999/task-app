@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import { faCheckCircle, faEdit } from '@fortawesome/free-regular-svg-icons';
-import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { Router } from '@angular/router';
+import { faEdit } from '@fortawesome/free-regular-svg-icons';
+import { faTrash, faCheck } from '@fortawesome/free-solid-svg-icons';
 import Note from '../models/note.model';
 import { NoteService } from '../services/note.service';
 
@@ -15,11 +16,17 @@ export class NoteCardComponent implements OnInit {
   @Output() requestDelete = new EventEmitter<Note>();
   faTrash = faTrash;
   faEdit = faEdit;
-  faCheckCircle = faCheckCircle;
+  faCheck = faCheck;
   
-  constructor(public NoteService: NoteService) { 
+  constructor(public NoteService: NoteService, private router: Router) { 
     this.note = new Note('', '');
   }
 
   ngOnInit(): void { }
+
+  completed(): void {
+    this.note.completedAt = new Date();
+    console.log(this.note);
+    
+  }
 }
