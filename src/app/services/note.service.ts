@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { LocationService } from '../location.service';
 import Note from '../models/note.model';
 
 @Injectable({
@@ -8,7 +9,13 @@ export class NoteService {
 
   public notes: Note[] = [];
 
-  constructor() { }
+  constructor(private locationService: LocationService) {
+    const savedNoteItems: any[] | string = this.locationService.getNotes() ?? [];
+
+    if (Array.isArray(savedNoteItems)) {
+      this.notes = savedNoteItems.map(item => new Note(item.title, item.body));
+    }  
+   }
 
   public saveNote(title: string, body: string): Note {
     const note: Note = new Note(title, body);

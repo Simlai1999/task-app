@@ -18,7 +18,10 @@ export class NoteCardComponent implements OnInit {
   faEdit = faEdit;
   faCheck = faCheck;
   
-  constructor(public NoteService: NoteService, private router: Router) { 
+  constructor(
+      public NoteService: NoteService,
+      private router: Router,
+    ){ 
     this.note = new Note('', '');
   }
 
