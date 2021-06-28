@@ -15,6 +15,10 @@
     color: #E5E5E5;
 }
 
+.note-card-body p {
+    margin-bottom: 0.2rem;
+}
+
 .fade-out-text {
     position: absolute;
     bottom: 0;
@@ -34,17 +38,21 @@
     margin-top: 3rem;
 }
 
-.trash {
-    position: absolute;
-    top: 104px;
-    right: 35px;
-    font-size: 18px;
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
     background: none;
-    color: #fb5a5a;
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 1rem;
     border: none;
+}
+
+.trash {
+    font-size: 20px;
+    color: #fb5a5a;
+    cursor: pointer;
 }
 
 .trash:active{
@@ -52,17 +60,10 @@
 }
 
 .edit {
-    position: absolute;
-    top: 97px;
-    right: -11px;
-    height: 50px;
     font-size: 20px;
-    background: none;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 1rem;
-    border: none;
     color: #00ff40b0;
+    cursor: pointer;
+    margin-right: 3rem;
 }
 
 .edit:active{
@@ -113,7 +114,7 @@ h6 {
     color: transparent;
     border: 2px solid #33FF9D;
     top: 15px;
-    right: 10px;
+    right: 2rem;
     height: 2.5rem;
     display: flex;
     justify-content: center;

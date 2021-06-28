@@ -4,7 +4,7 @@ import Note from './models/note.model';
 @Injectable({
   providedIn: 'root'
 })
-export class LocationService {
+export class StorageService {
 
   constructor() { }
   
@@ -26,7 +26,9 @@ export class LocationService {
     return savedNotes == null ? [] : JSON.parse(savedNotes);
   }
 
-  public removeNote() {
-    localStorage.removeItem('SAVED_NOTES');
+  public removeNote(index: number) {
+    const notes = this.getNotes();
+    notes.splice(index, 1);
+    window.localStorage.setItem('SAVED_NOTES', JSON.stringify(notes));
   }
 }

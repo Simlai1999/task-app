@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { LocationService } from 'src/app/location.service';
+import { StorageService } from 'src/app/storage.service';
 import Note from 'src/app/models/note.model';
 import { NoteService } from 'src/app/services/note.service';
 
@@ -17,7 +17,7 @@ export class NoteDetailsComponent implements OnInit {
   constructor(
     private noteService: NoteService,
     private router: Router,
-    private locationService: LocationService
+    private storageService: StorageService
   ) { }
 
   ngOnInit(): void { }
@@ -29,7 +29,7 @@ export class NoteDetailsComponent implements OnInit {
       this.router.navigate(['/note-list']);
     }
     
-    this.locationService.saveNote(this.noteService.notes);
+    this.storageService.saveNote(this.noteService.notes);
     
     
     // TODO: some error handling here

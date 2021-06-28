@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import Note from 'src/app/models/note.model';
 import { NoteService } from 'src/app/services/note.service';
 import { Router, Event, NavigationEnd, ActivatedRoute } from '@angular/router';
-import { LocationService } from 'src/app/location.service';
+import { StorageService } from 'src/app/storage.service';
 
 @Component({
   selector: 'app-notes-list',
@@ -15,7 +15,7 @@ export class NotesListComponent implements OnInit {
 
   constructor(
     public noteService: NoteService,
-    private locationService: LocationService,
+    public storageService: StorageService,
     private router: Router,
     private route: ActivatedRoute,
   ) {
@@ -30,7 +30,7 @@ export class NotesListComponent implements OnInit {
   }
 
   ngOnInit(): void {    
-    const savedNotes = this.locationService.getNotes();
+    const savedNotes = this.storageService.getNotes();
     console.log(savedNotes);
 
     this.noteService.notes.map(note => {

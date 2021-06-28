@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { LocationService } from '../location.service';
+import { StorageService } from '../storage.service';
 import Note from '../models/note.model';
 
 @Injectable({
@@ -9,8 +9,8 @@ export class NoteService {
 
   public notes: Note[] = [];
 
-  constructor(private locationService: LocationService) {
-    const savedNoteItems: any[] | string = this.locationService.getNotes() ?? [];
+  constructor(private storageService: StorageService) {
+    const savedNoteItems: any[] | string = this.storageService.getNotes() ?? [];
 
     if (Array.isArray(savedNoteItems)) {
       this.notes = savedNoteItems.map(item => new Note(item.title, item.body));
@@ -29,6 +29,7 @@ export class NoteService {
     const originalItemCount: number = this.notes.length;
     this.notes.splice(index, 1);
     const newItemCount: number = this.notes.length;
+    
     
 
     return originalItemCount !== newItemCount;
