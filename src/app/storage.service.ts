@@ -23,6 +23,7 @@ export class StorageService {
 
   public getNotes(): any[] {
     const savedNotes = window.localStorage.getItem('SAVED_NOTES');
+
     return savedNotes == null ? [] : JSON.parse(savedNotes);
   }
 
@@ -30,5 +31,7 @@ export class StorageService {
     const notes = this.getNotes();
     notes.splice(index, 1);
     window.localStorage.setItem('SAVED_NOTES', JSON.stringify(notes));
+    
+    return notes;
   }
 }

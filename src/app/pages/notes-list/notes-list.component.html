@@ -3,8 +3,8 @@
   <h2 class="header-name">Sounak</h2>
 
   <div class="notes-list">
-    <app-note-card *ngFor="let note of notes; index as i" [note]="note"
-      (requestDelete)="storageService.removeNote(i)">
+    <app-note-card *ngFor="let note of noteService.notes; index as i" [note]="note"
+      (requestDelete)="onDelete(i)">
     </app-note-card>
 
   </div>

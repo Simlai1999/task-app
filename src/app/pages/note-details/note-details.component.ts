@@ -23,13 +23,14 @@ export class NoteDetailsComponent implements OnInit {
   ngOnInit(): void { }
 
   submitForm(): void {
+    const notes: Note[] = this.storageService.getNotes();
+    notes.push(new Note(this.title, this.body));
+    this.storageService.saveNote(notes);
     const savedNote: Note = this.noteService.saveNote(this.title, this.body);
-
-    if (savedNote.isActive()) {
-      this.router.navigate(['/note-list']);
-    }
+    console.log(savedNote);
     
-    this.storageService.saveNote(this.noteService.notes);
+    this.router.navigate(['/note-list']);
+    
     
     
     // TODO: some error handling here

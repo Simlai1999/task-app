@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { faEdit } from '@fortawesome/free-regular-svg-icons';
-import { faTrash, faCheck } from '@fortawesome/free-solid-svg-icons';
+import { faTrash, faCheck, faEdit } from '@fortawesome/free-solid-svg-icons';
 import { StorageService } from '../storage.service';
 import Note from '../models/note.model';
 import { NoteService } from '../services/note.service';

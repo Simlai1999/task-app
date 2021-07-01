@@ -29,13 +29,17 @@ export class NotesListComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {    
-    const savedNotes = this.storageService.getNotes();
-    console.log(savedNotes);
+  ngOnInit(): void { }
 
-    this.noteService.notes.map(note => {
-      this.notes.push(note);
-    });
+  public onDelete(index: number) {
+    this.storageService.removeNote(index);
+    const notes = this.storageService.getNotes();
+    this.noteService.notes = [];
+    notes.forEach(note => {
+      this.noteService.notes.push(note);
+    })
+    console.log(this.noteService.notes);
+    
   }
 
   private applyFilter(filterName: string) {

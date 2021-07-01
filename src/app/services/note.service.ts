@@ -18,19 +18,20 @@ export class NoteService {
    }
 
   public saveNote(title: string, body: string): Note {
-    const note: Note = new Note(title, body);
 
-    this.notes.push(note);
+    const notes = this.storageService.getNotes();
+    this.notes = [];
+    notes.forEach(note => {
+      this.notes.push(new Note(note.title, note.body))
+    });
 
-    return note;
+    return this.notes[this.notes.length - 1];
   }
 
   public deleteTask(index: number): boolean {
     const originalItemCount: number = this.notes.length;
     this.notes.splice(index, 1);
     const newItemCount: number = this.notes.length;
-    
-    
 
     return originalItemCount !== newItemCount;
   }
